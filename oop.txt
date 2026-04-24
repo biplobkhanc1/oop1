@@ -1,0 +1,297 @@
+# opp start:
+"""
+class my_house():
+    pot="r"
+
+    dish='asjhxg'
+    sum= pot+dish
+    num=["1,2,,34,4,5"]
+obj1= my_house()
+print(obj1.pot)
+print(obj1.dish)
+print(obj1.sum)
+print(obj1.num)
+"""
+import json
+from textwrap import indent
+from time import strftime
+
+# opp class veriable and  methord
+
+"""class myclass():
+    x=2
+    y=5
+    z=6
+    def addtwo(self,a,b):
+        sum=self.x+self.y+self.z+a+b
+        print(sum)
+obj1= myclass()
+obj1.addtwo(2,3)
+"""
+
+# methords er modthe methords:
+"""
+class myclass():
+    x=2
+    y=5
+    z=6
+    def addtwo(self,a,b,c,d):
+        sum=self.x+self.y+self.z+a+c+d
+        print(sum)
+    def adnew(self):
+        self.addtwo(2,3,6,8)
+    def bip(self):
+        self.addtwo(43,4,4,4)
+
+obj1= myclass()
+obj1.addtwo(2,3,2,5)
+obj1.adnew()
+obj1.bip()
+"""
+# opp constructors:        note: return kaj kore na.
+"""
+class myclass():
+    x=10
+    y=20
+    def __init__(self,a,b):
+        sub=self.x+self.y+a+b
+        print(sub)
+obj= myclass(2,3)
+"""
+# constructor er moddhe new veryable create:(z)    o main veryable man change:
+"""
+class myclass():
+    x=10
+    y=20
+    def __init__(self,zip,xb,):
+        self.z=zip
+        self.x=xb
+    def addtwo(self):
+        print(self.x+self.y+self.z)
+obj= myclass(20,3)
+obj.addtwo()
+
+
+"""
+# oop static subidha methord
+"""
+class myclass:
+    x=10
+    y=20
+    @staticmethod
+    def addtwo():
+        z=myclass.x+myclass.y
+        print(z)
+obj=myclass()
+obj.addtwo()
+myclass.addtwo()
+obj=myclass()
+obj.addtwo()
+# 30,30,30 out put
+# oop static veriable kivabe kaj kore?
+class myclass:
+    x=10
+    y=20
+    @staticmethod
+    def addtwo():
+        z=myclass.x+myclass.y
+        print(z)
+print(myclass.x) #static veriable
+print(myclass.y) #static veriable
+obj=myclass()   ## obj kore  veriable
+print(obj.x)    # obj veriable
+print(obj.y)    # obj veriable
+"""
+
+# Inheritance kivave kaj kore?
+"""
+class grandfather:
+    x=10
+    y=20
+    def addtwo(self):
+        print(self.x+self.y)
+    def gun(self):
+        print(self.x*self.y)
+class father:
+    a=20
+    b=30
+    def bip(self):
+        print(self.a*self.b)
+
+class son(grandfather,father):
+    pass
+obj=son()
+obj.addtwo()
+obj.gun()
+obj.bip()
+print(obj.a)
+"""
+# multiline inheritance?
+"""
+class grandfather:
+    x=10
+    y=20
+    def addtwo(self):
+        print(self.x+self.y)
+    def gun(self):
+        print(self.x*self.y)
+class father:
+    pass
+
+class son(grandfather,father):
+    pass
+obj=son()
+obj.addtwo()
+obj.gun()
+print(obj.x)"""
+# inheritanc in constructors kivabe kaj kore
+"""class father:
+    bank="lever"
+    x=20
+    y=30
+    def __init__(self):
+        man="euiedyqidy"
+        print(man)
+    def addtwo(self):
+        print(self.x+self.y)
+class son(father):
+    def __init__(self):
+        super().__init__()
+        man="tttttt"
+        print(man)
+obj=son()
+obj.addtwo()"""
+# inheritance static ??
+"""class father:
+    x=20
+    y=30
+    def addtow(self,w):
+        self.x=w
+        return(self.x+self.y)
+
+obj=father()
+obj.addtow(100)
+class son(father):
+    def aaa(self):
+        dd=self.addtow(100)
+        print(dd)
+obj=son()
+
+obj.aaa()"""
+
+"""class father:
+    x=20
+    y=30
+    @staticmethod
+    def addtow():
+        print(father.x+father.y)
+
+
+class son(father):
+    pass
+son.addtow()
+"""
+# methord overridding:
+"""class father:
+    x=12
+    y=19
+    def addt(self):
+        z=self.x+self.y
+        print(z)
+class son(father):
+    def addt(self):
+        z=self.x+self.y+30
+        print(z)
+obj=son()
+obj.addt()"""
+# opp abstruck class:
+from abc import ABC
+
+
+"""class father(ABC):
+    x=10
+    y=20
+    @abstractmethod
+    def addtwo(self):
+        z=self.x+self.y
+        pass
+class son(father):
+    def addtwo(self):
+        z=self.x+self.y
+        print(z)
+obj=son()
+obj.addtwo()"""
+# oop- overloading o veryable lenth argument:
+"""class dhaka:
+    x=10
+    y=20
+    def our(self,a,b):
+        print(self.x+self.y+a+b)
+obj=dhaka()
+obj.our(1,10)"""
+#overloading o veryable lenth argument:
+"""class dhaka:
+    x=10
+    y=20
+    def our(self,):
+        print(self.x+self.y)
+    def bb(self,*a):
+        print(a)
+obj=dhaka()
+obj.our()
+obj.bb(23,34,56,78)
+obj.bb(76236,56,78)"""
+# oop access modifier..........
+
+# public access modifier:
+"""class car:
+    Brand="Toyota"
+    def display(self):
+        print(f"my car hause is {self.Brand}")
+class son(car):
+    pass
+obj=son()
+obj.display()"""
+
+# _protected access modifier:
+
+"""class car:
+    _Brand="Toyota"
+    def display(self):
+        print(f"my car hause is {self._Brand}")
+class son(car):
+    pass
+obj=son()
+obj.display()"""
+#__private access modifier:
+"""class car:
+    __Brand="Toyota"
+    def display(self):
+        print(f"my car hause is {self.__Brand}")
+class son(car):
+    def displaypp(self):
+        print(f"my name is{self.__Brand}")
+
+obj=son()
+obj.display()"""
+# getter:
+"""class car:
+    __brand="likee"
+    @property
+    def display(self):
+        return self.__brand
+
+obj=car()
+print(obj.display)"""
+#getter o setter :
+"""class car:
+    __brand="likee"
+    @property
+    def brand(self):
+        return self.__brand
+
+
+    @brand.setter
+    def brand(self,x):
+        self.__brand=x
+obj=car()
